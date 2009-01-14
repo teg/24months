@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\begin{document}
+
+\title{Normalisation in Deep Inference}
+\author{Tom Gundersen}
+
+\maketitle
+
+\section{Introduction}
+
+We want to understand normalisation for propositional classical logic.
+
+Our claim is that normalisation is about the dependency between structural inference rules, and not about logical connectives or logical inference rules. Furthermore, normalisation is a robust phenomena and given the right tools we have a wide choice of normal forms and normalisation procedures.
+
+The novelty of our work is the introduction of \emph{atomic flows}. The atomic flow, $A$, of a derivation, $\Phi$, is a graph obtained by tracing the atom occurences in $\Phi$. An atomic flow contains no information about logical connectives nor about logical inference rules, yet it contains enough information to study many aspects of normalisation.
+
+We define several normal forms of derivations, all based on the notion of \emph{streamlining} which is a generalisation of cut elimination. The normal forms are defined in terms of atomic flows and we say that a derivation is streamlined if its associated atomic flow has a certain shape.
+
+We present normalisation procedures to obtain our normal forms. Each normalisation procedure is given both for atomic flows and derivations and we prove soundness results showing that whatever normalisation step can be applied to an atomic flow the corresponding step can be applied to the derivation. The novelty of these normalisation procedures is that they are dictated in their entirety by the atomic flows of the derivations they normalise. In other words, if all one cares about is the atomic flow of the result of normalising $\Phi$ one could perform normalisation on the atomic flow of $\Phi$ directly and forget all about the derivations.
+
+\section{Atomic Flows}
+
+\begin{itemize}
+\item Every derivation has a unique atomic flow.
+\item We often consider atomic flows equivalent modulo associativity of contractions.
+\item An atomic flow has ``the same'' size as the corresponding derivation.
+\end{itemize}
+
+\section{Normalisation}
+
+We can divide the problem of normalisation broadly into three phenomena:
+
+\subsection{Weakening}
+
+We show that we can permute weakenings so that there is no path from a (co)weakening to another node.
+
+\subsection{Contraction}
+
+Contractions can be permuted down and cocontractions can be permuted up, when they pass each other they create exponential complexity.
+
+\subsection{Interaction}
+
+We show techniques for removing paths from interaction to cointeraction nodes. This is where the non-confluency lies and these are the non-trivial normalisation procedures. It is still an open question if this can be done in polynomial time.
+
+\subsubsection{Exponential Non-Confluent}
+
+\begin{itemize}
+\item Done inductively on the number of atoms.
+\item Completely independent of Weakening and Contraction normalisation.
+\end{itemize}
+
+\subsubsection{Confluent}
+
+\begin{itemize}
+\item Only for proofs.
+\item Given the atomic flow of the derivation to be normalised the atomic flow of the normalised derivation is unique modulo associativity of (co)contractions.
+\item The way we present it slightly overlaps with Weakening normalisation, but this is just a matter of presentation and could be avoided.
+\end{itemize}
+
+\subsubsection{Quasipolynomial}
+
+\begin{itemize}
+\item Uses threshold functions which allows us to exploit a complex sharing phenomena introducing meeting contraction-cocontraction nodes.
+\item Does not yet allow for an elegant symmetric construction (but an inelegant one is possible).
+\end{itemize}
+
+\section{Normal Forms}
+
+\begin{itemize}
+\item Weakly-streamlined --- no paths from interactions to cointeractions,
+\item Streamlined --- and no paths from (co)weakenings to (co)interactions,
+\item Super-streamlined --- and no paths from (co)weakenings to (co)weakenings or (co)contractions,
+\item Hyper-streamlined --- and no paths with contractions above cocontractions or cointeractions nor cocontractions below contractions or interactions.
+\end{itemize}
+
+\end{document}
