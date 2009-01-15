@@ -1,0 +1,41 @@
+\documentclass[]{article}
+
+\title{Normalisation in Deep Inference \\ 24 Month Progress Report}
+
+\author{Tom Gundersen}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview of the work}
+
+We want to understand normalisation for propositional classical logic.
+
+Our claim is that normalisation is about the dependency between structural inference rules, and not about logical connectives or logical inference rules. Furthermore, normalisation is a robust phenomena and given the right tools we have a wide choice of normal forms and normalisation procedures.
+
+The novelty of our work is the introduction of \emph{atomic flows}. The atomic flow of a derivation, $\Phi$, is a graph obtained by tracing the atom occurences in $\Phi$. An atomic flow contains no information about logical connectives nor about logical inference rules, yet it contains enough information to study many aspects of normalisation.
+
+We define several normal forms of derivations, all based on the notion of \emph{streamlining} which is a generalisation of cut elimination. The normal forms are defined in terms of atomic flows and we say that a derivation is streamlined if its associated atomic flow has a certain shape.
+
+We present normalisation procedures to obtain our normal forms. Each normalisation procedure is given both for atomic flows and derivations and we prove soundness results showing that whatever normalisation step can be applied to an atomic flow the corresponding step can be applied to the derivation. The novelty of these normalisation procedures is that they are dictated in their entirety by the atomic flows of the derivations they normalise. In other words, if all one cares about is the atomic flow of the result of normalising $\Phi$ one could perform normalisation on the atomic flow of $\Phi$ directly and forget all about the derivations.
+
+The intention is for this work to help in the search for better representations of proofs and to help in the study of complexity and identity of proofs.
+
+\section{Work done so far}
+
+\begin{itemize}
+\item Atomic flows were introduced in the paper \emph{Normalisation Control in Deep Inference via Atomic Flows} published in \emph{Logical Methods for Computer Science}. This was work done jointly with Alessio Guglielmi based on an idea conceived by him.
+\item There is a draft (attached) of a follow-up paper preliminarily called \emph{Normalisation Control in Deep Inference via Atomic Flows II}. It contains two normalisation procedures, one conceived by Alessio and one conceived by myself. The results are all done, but the paper needs extensive writing before it can be published.
+\item There is an almost finished draft paper (attached), \emph{Quasipolinomial Normalisation in Deep Inference}. This is work done mainly by Paola Bruscoli and Alessio. My contribution to the paper is a simplification of the \emph{threshold functions} and their associated derivations.
+\end{itemize}
+
+\section{Remaining work}
+
+\begin{itemize}
+\item I have a, so far unpublished, technique which would allow the results about quasipolinomial normalisation to work for streamlining and not only cut elimination. This would be worth while writing up. However, this way of solving the problem is not very elegant and I would like to spend some time on finding an elegant solution, possibly along the lines of \emph{Atomic Flows II}.
+\item Alessio and Michel Parigot are working on a paper about a new formalism, \emph{Formalism B}. My plan is to contribute a normalisation result, probably based on \emph{Atomic Flows II}, to this paper.
+\item There is a draft of a paper showing the polynomial relationship between the sizes of derivations and atomic flows written by Paola, Lutz Stra\ss{}burger and Alessio, which I hope to contribute to.
+\end{itemize}
+
+\end{document}
