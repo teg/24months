@@ -12,7 +12,7 @@ We want to understand normalisation for propositional classical logic.
 
 Our claim is that normalisation is about the dependency between structural inference rules, and not about logical connectives or logical inference rules. Furthermore, normalisation is a robust phenomena and given the right tools we have a wide choice of normal forms and normalisation procedures.
 
-The novelty of our work is the introduction of \emph{atomic flows}. The atomic flow, $A$, of a derivation, $\Phi$, is a graph obtained by tracing the atom occurences in $\Phi$. An atomic flow contains no information about logical connectives nor about logical inference rules, yet it contains enough information to study many aspects of normalisation.
+The novelty of our work is the introduction of \emph{atomic flows}. The atomic flow of a derivation, $\Phi$, is a graph obtained by tracing the atom occurences in $\Phi$. An atomic flow contains no information about logical connectives nor about logical inference rules, yet it contains enough information to study many aspects of normalisation.
 
 We define several normal forms of derivations, all based on the notion of \emph{streamlining} which is a generalisation of cut elimination. The normal forms are defined in terms of atomic flows and we say that a derivation is streamlined if its associated atomic flow has a certain shape.
 
@@ -21,7 +21,7 @@ We present normalisation procedures to obtain our normal forms. Each normalisati
 \section{Atomic Flows}
 
 \begin{itemize}
-\item Every derivation has a unique atomic flow.
+\item Every derivation has a unique atomic flow (in fact we define a surjective mapping from derivations to atomic flows).
 \item We often consider atomic flows equivalent modulo associativity of contractions.
 \item An atomic flow has ``the same'' size as the corresponding derivation.
 \end{itemize}
