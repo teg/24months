@@ -12,21 +12,26 @@
 
 We study normalisation for propositional classical logic.
 
-We present normalisation techniques which
+We present normalisation techniques which, contrary to our expectations,
 \begin{itemize}
 \item do not involve logical connectives or logical inference rules and
-\item are largely syntax independent.
+\item do not involve any permutations and hence are largely syntax independent.
 \end{itemize}
 
-The novelty of our work is the introduction of \emph{atomic flows}. The atomic flow of a derivation, $\Phi$, is a graph obtained by tracing the atom occurences in $\Phi$. An atomic flow contains no information about logical connectives nor about logical inference rules. Yet, contrary to our expectations, it contains enough information to study many aspects of normalisation.
+The novelty of our work is the introduction of \emph{atomic flows}. The atomic flow of a derivation, $\Phi$, is a graph obtained by tracing the atom occurences in $\Phi$. An atomic flow contains no information about logical connectives nor about logical inference rules. Yet, it contains enough information to study many aspects of normalisation.
 
-We define several normal forms of derivations, all based on the notion of \emph{streamlining} which is a generalisation of cut elimination. The normal forms are defined in terms of atomic flows and we say that a derivation is streamlined if its associated atomic flow has a certain shape.
+We define several normal forms of derivations, mostly based on the notion of \emph{streamlining} which is a generalisation of cut elimination. The normal forms are defined in terms of atomic flows and we say that a derivation is streamlined if its associated atomic flow has a certain shape.
 
 We present normalisation procedures to obtain our normal forms. Each normalisation procedure is given both for atomic flows and derivations and we prove soundness results showing that whatever normalisation step can be applied to an atomic flow the corresponding step can be applied to the derivation. The novelty of these normalisation procedures is that they are dictated in their entirety by the atomic flows of the derivations they normalise.
 
 The results we present are in the formalism calculus of structures, but as it turns out atomic flows, and hence our normalisation results, are not strongly dependent on our choice of formalism. As long as the formalism has certain properties, like atomicity of structural rules and linearity of logical rules, our methods will apply.
 
-The intention is for this work to help in the search for better representations of proofs and to help in the study of complexity and identity of proofs.
+The intention is for this work to help in the search for better representations of proofs and to help in the study of complexity and identity of proofs. In particular the open problems in complexity we might hope to contribute to are
+\begin{itemize}
+ \item Interpolation --- What is the lower bound on the interpolant of two formulae and
+ \item Polynomial simulations of proof systems --- E.g. does Frege polynomially simulate extended Frege?
+\end{itemize}
+
 
 \section{Work done so far}
 
